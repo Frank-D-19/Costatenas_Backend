@@ -2,6 +2,7 @@
 
 namespace Agencia\Http\Controllers\API;
 
+use Agencia\Http\Requests\StoreIndicador;
 use Agencia\Indicador;
 use Agencia\Parametro;
 use Agencia\Unidad_Medida;
@@ -65,7 +66,7 @@ class IndicadorController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreIndicador $request)
     {
         if ((!trim($request->nombre)) || (!trim($request->definicion)) || (!trim($request->importancia)) || (!trim($request->colaboracion)) || (!trim($request->fuente))){
             $response=Response::json([
