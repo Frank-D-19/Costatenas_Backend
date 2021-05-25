@@ -23,6 +23,7 @@ class StoreIndicador extends FormRequest
      */
     public function rules()
     {
+        //Validaciones
         return [
             'nombre' => 'required|min:5',
             'definicion' => 'required|min:5',
